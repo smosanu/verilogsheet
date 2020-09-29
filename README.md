@@ -55,3 +55,28 @@ module ModuleNameTestbench(
 endmodule
 
 ```
+
+```
+input wire  [TypeW-1:0]dqin    [DimA-1:0][DimB-1:0],
+
+  genvar i;
+  generate
+    for (i = 0; i < Cnt ; i=i+1)
+    begin:MN
+      ModuleName #(.PNAME(PNAME)) MNi (
+      .clk(clk),
+      .reset(reset),
+      .din(din[i]),
+      .dout(dout[i])
+      );
+    end
+  endgenerate
+```
+
+```
+`ifdef ABC
+  input ABC
+  `elsif DEF
+  input DEF
+  `endif
+```
