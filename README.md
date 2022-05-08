@@ -1,5 +1,7 @@
 # verilogsheet
-Cheat sheet for Verilog
+Cheat sheet for Verilog and other notes
+
+reset_timing, read_xdc (file) or create_clock -name clk -period 4 -waveform {0 2} [get_ports clk], last report_timing (can use GUI)
 
 ```
 `timescale 1ns / 1ps
